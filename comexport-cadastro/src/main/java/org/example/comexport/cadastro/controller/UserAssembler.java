@@ -1,6 +1,6 @@
-package controller;
+package org.example.comexport.cadastro.controller;
 
-import model.User;
+import org.example.comexport.jpa.model.User;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;

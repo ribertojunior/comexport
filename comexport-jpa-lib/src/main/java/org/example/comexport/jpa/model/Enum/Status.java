@@ -1,4 +1,4 @@
-package model.Enum;
+package org.example.comexport.jpa.model.Enum;
 
 public enum Status {
   AGUARDANDO_ENTREGA("aguardando entrega"),

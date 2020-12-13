@@ -1,4 +1,4 @@
-package controller;
+package org.example.comexport.cadastro.controller;
 
 public class UserNotFoundException extends RuntimeException {
 

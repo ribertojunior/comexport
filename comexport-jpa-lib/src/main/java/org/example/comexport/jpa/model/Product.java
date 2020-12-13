@@ -1,4 +1,4 @@
-package model;
+package org.example.comexport.jpa.model;
 
 import lombok.*;
 
@@ -13,9 +13,11 @@ import java.math.BigDecimal;
 public class Product {
   private @Id
   @GeneratedValue
-  @OneToMany(targetEntity = Orders.class, mappedBy = "productId")
   Long id;
   @NonNull private String description;
   @NonNull private BigDecimal price;
-  private DateRecord dateRecord;
+  @Temporal(TemporalType.TIMESTAMP)
+  private java.util.Date createdAt;
+  @Temporal(TemporalType.TIMESTAMP)
+  private java.util.Date updatedAt;
 }

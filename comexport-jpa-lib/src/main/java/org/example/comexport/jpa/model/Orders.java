@@ -1,8 +1,9 @@
-package model;
+package org.example.comexport.jpa.model;
 
 import lombok.*;
-import model.Enum.CanalDeVenda;
-import model.Enum.Status;
+import org.example.comexport.jpa.model.Enum.CanalDeVenda;
+import org.example.comexport.jpa.model.Enum.Status;
+import org.springframework.hateoas.mediatype.problem.Problem;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -19,17 +20,20 @@ public class Orders {
   @NonNull
   @ManyToOne
   @JoinColumn(name = "user_id")
-  private Long userId;
+  private User user;
   @ManyToOne
   @JoinColumn(name = "product_id")
   @NonNull
-  private Long productId;
+  private Product product;
   @NonNull
   private Status status;
   @NonNull
   private CanalDeVenda canalDeVenda;
   @NonNull
   private BigDecimal price;
-  private DateRecord dateRecord;
+  @Temporal(TemporalType.TIMESTAMP)
+  private java.util.Date createdAt;
+  @Temporal(TemporalType.TIMESTAMP)
+  private java.util.Date updatedAt;
 
 }

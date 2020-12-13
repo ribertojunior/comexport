@@ -1,4 +1,4 @@
-package model.Enum;
+package org.example.comexport.jpa.model.Enum;
 
 public enum CanalDeVenda {
   E_COMMERCE("e-commerce"),
