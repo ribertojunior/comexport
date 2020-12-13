@@ -1,5 +1,7 @@
 package Utils;
 
+import model.User;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,5 +14,10 @@ public class Utils {
     if (emailStr == null) return false;
     Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(emailStr);
     return matcher.find();
+  }
+
+  public static boolean validaUser(User user) {
+
+    return true;
   }
 }
