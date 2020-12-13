@@ -20,4 +20,9 @@ public class Utils {
     return user != null && !user.getName().trim().isEmpty()
         && validateEmail(user.getEmail()) && user.getBirthday() != null;
   }
+
+  public static boolean validaUserReplace(User user) {
+    return user != null && !user.getName().trim().isEmpty()
+        && user.getBirthday() != null;
+  }
 }

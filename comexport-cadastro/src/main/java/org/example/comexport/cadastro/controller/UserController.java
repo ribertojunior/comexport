@@ -55,7 +55,7 @@ public class UserController {
         .body(Problem.create().withTitle("User error").withDetail("User data insufficient or malformed"));
   }
 
-  @GetMapping("/exams/{id}")
+  @GetMapping("/users/{id}")
   EntityModel<User> one(@PathVariable Long id) {
     User user = repository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
     return assembler.toModel(user);
@@ -63,7 +63,7 @@ public class UserController {
 
   @PutMapping("/users/{id}")
   ResponseEntity<?> replaceUser(@RequestBody User novoUser, @PathVariable Long id) {
-    if (Utils.validaUser(novoUser)) {
+    if (Utils.validaUserReplace(novoUser)) {
       User user = repository.findById(id).map(user1 -> {
         user1.setName(novoUser.getName());
         user1.setBirthday(novoUser.getBirthday());
@@ -82,7 +82,7 @@ public class UserController {
     }
   }
 
-  @DeleteMapping("/exams/{id}")
+  @DeleteMapping("/users/{id}")
   ResponseEntity<?> deleteExam(@PathVariable Long id) {
     repository.deleteById(id);
     return ResponseEntity.noContent().build();
