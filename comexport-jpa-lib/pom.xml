@@ -11,9 +11,9 @@
         <relativePath/> <!-- lookup parent from repositories -->
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>comexport-jpa</artifactId>
+    <artifactId>comexport-jpa-lib</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>comexport-jpa</name>
+    <name>comexport-jpa-lib</name>
     <description>Avaliação Comexport - JPA</description>
 
     <properties>
