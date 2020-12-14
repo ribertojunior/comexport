@@ -3,7 +3,6 @@ package org.example.comexport.jpa.model;
 import lombok.*;
 import org.example.comexport.jpa.model.Enum.CanalDeVenda;
 import org.example.comexport.jpa.model.Enum.Status;
-import org.springframework.hateoas.mediatype.problem.Problem;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

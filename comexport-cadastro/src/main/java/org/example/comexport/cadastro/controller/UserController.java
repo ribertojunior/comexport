@@ -83,7 +83,7 @@ public class UserController {
   }
 
   @DeleteMapping("/users/{id}")
-  ResponseEntity<?> deleteExam(@PathVariable Long id) {
+  ResponseEntity<?> deleteUser(@PathVariable Long id) {
     repository.deleteById(id);
     return ResponseEntity.noContent().build();
   }
