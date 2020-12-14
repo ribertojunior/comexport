@@ -18,6 +18,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.RoundingMode;
 import java.util.Calendar;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -51,7 +52,7 @@ public class OrderController {
 
   @PostMapping("orders/users/{user_id}/products/{prod_id}")
   ResponseEntity<?> newOrder(@RequestBody Orders order, @PathVariable Long user_id, @PathVariable Long prod_id) {
-    if (Utils.validaOrder(order)) {
+    if (Utils.validaCriaOrder(order)) {
       Orders orderWithUser = userRepository.findById(user_id).map(user -> {
         order.setUser(user);
         return order;
@@ -96,7 +97,7 @@ public class OrderController {
         order66.setUser(orderWithUserProduct.getUser());
         order66.setProduct(orderWithUserProduct.getProduct());
         order66.setCanalDeVenda(orderWithUserProduct.getCanalDeVenda());
-        order66.setPrice(orderWithUserProduct.getPrice());
+        order66.setPrice(orderWithUserProduct.getPrice().setScale(4, RoundingMode.HALF_EVEN));
         order66.setUpdatedAt(Calendar.getInstance().getTime());
         return repository.save(order66);
       }).orElseGet(() -> {

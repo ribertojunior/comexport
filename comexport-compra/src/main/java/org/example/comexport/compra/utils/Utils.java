@@ -10,4 +10,9 @@ public class Utils {
         && order.getPrice() != null && order.getPrice().compareTo(BigDecimal.ZERO) > 0
         && order.getCanalDeVenda() != null;
   }
+
+  public static boolean validaCriaOrder(Orders order) {
+    return order != null
+        && order.getCanalDeVenda() != null;
+  }
 }
