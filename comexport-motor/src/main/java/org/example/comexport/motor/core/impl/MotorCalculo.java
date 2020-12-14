@@ -1,14 +1,20 @@
 package org.example.comexport.motor.core.impl;
 
+import lombok.Data;
 import org.example.comexport.compra.utils.Utils;
 import org.example.comexport.jpa.model.Enum.Status;
 import org.example.comexport.jpa.model.Orders;
 import org.example.comexport.motor.controller.OrderMalformedException;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class MotorCalculo implements org.example.comexport.motor.core.MotorCalculo {
+@Data
+@Repository
+public class MotorCalculo implements org.example.comexport.motor.core.IMotorCalculo {
+
   @Override
   public Orders processarPedido(Orders novaOrder) throws Exception {
     if (Utils.validaOrder(novaOrder)) {
