@@ -1,6 +1,5 @@
 package org.example.comexport.compra.controller.order;
 
-import org.example.comexport.compra.controller.product.ProductController;
 import org.example.comexport.jpa.model.Orders;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;

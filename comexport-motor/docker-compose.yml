@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  motorcalculoservice:
+    image: motor-calculo:${versao}
+    ports:
+    - "8080"
+    - networks:
+        -vcpbr
+
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.6.0.0/16

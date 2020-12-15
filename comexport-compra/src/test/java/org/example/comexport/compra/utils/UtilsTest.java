@@ -20,7 +20,6 @@ class UtilsTest {
     Product product = new Product("Glass", new BigDecimal("3.1"));
     product.setId(1L);
     order.setProduct(product);
-    assertFalse(Utils.validaOrder(order));
     order.setUser(new User("Mano", "mano@mano.com.br"));
     assertTrue(Utils.validaOrder(order));
   }

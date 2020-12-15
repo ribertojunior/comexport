@@ -6,7 +6,6 @@ import org.example.comexport.jpa.model.Enum.Status;
 import org.example.comexport.jpa.model.Orders;
 import org.example.comexport.motor.controller.OrderMalformedException;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
