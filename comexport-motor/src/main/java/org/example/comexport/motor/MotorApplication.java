@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = "org.example.comexport.jpa.repositories")
-@EntityScan(basePackages = "org.example.comexport.jpa.model")
+@EntityScan(basePackages = "org.example.comexport.jpa")
 public class MotorApplication {
   public static void main(String[] args) {
     SpringApplication.run(MotorApplication.class, args);

@@ -1,12 +1,11 @@
 version: '3.1'
 services:
   motorcalculoservice:
-    image: motor-calculo:${versao}
+    image: motor-calculo:00.00.01
     ports:
     - "8080"
-    - networks:
-        -vcpbr
-
+    networks:
+        - vpcbr
 networks:
   vpcbr:
     driver: bridge

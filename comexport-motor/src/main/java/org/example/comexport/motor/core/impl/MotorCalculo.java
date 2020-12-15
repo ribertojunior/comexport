@@ -1,10 +1,10 @@
 package org.example.comexport.motor.core.impl;
 
 import lombok.Data;
-import org.example.comexport.compra.utils.Utils;
 import org.example.comexport.jpa.model.Enum.Status;
 import org.example.comexport.jpa.model.Orders;
 import org.example.comexport.motor.controller.OrderMalformedException;
+import org.example.comexport.motor.utils.Utils;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
